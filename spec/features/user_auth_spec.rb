@@ -23,7 +23,7 @@ describe 'login process', type: :feature do
   it 'logs me in' do
     login!(test_user)
 
-    expect(page).to have_content 'Signed in successfully.'
+    expect(page).to have_content test_user.email
   end
 
   it 'logs me out' do
